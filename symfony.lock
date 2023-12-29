@@ -40,6 +40,9 @@
             "tests/bootstrap.php"
         ]
     },
+    "survos/deployment-bundle": {
+        "version": "1.5.121"
+    },
     "symfony/asset-mapper": {
         "version": "7.0",
         "recipe": {

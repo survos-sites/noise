@@ -1,16 +1,20 @@
 import { Controller } from '@hotwired/stimulus';
 
 /*
- * This is an example Stimulus controller!
- *
- * Any element with a data-controller="hello" attribute will cause
- * this controller to be executed. The name "hello" comes from the filename:
- * hello_controller.js -> "hello"
- *
- * Delete this file or adapt it for your use!
- */
+* The following line makes this controller "lazy": it won't be downloaded until needed
+* See https://github.com/symfony/stimulus-bridge#lazy-controllers
+*/
+/* stimulusFetch: 'lazy' */
 export default class extends Controller {
-    connect() {
-        this.element.textContent = 'Hello Stimulus! Edit me in assets/controllers/hello_controller.js';
+    static targets = ['message']
+    static values = {
+        name: String,
     }
+    // ...
+
+
+    connect() {
+        this.element.textContent = 'Hello ' + this.nameValue;
+    }
+
 }
