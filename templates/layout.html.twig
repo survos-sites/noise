@@ -17,11 +17,15 @@
     {% block javascripts %}
     {{ parent() }}
 
-    <!-- service worker registration -->
-    <script>
-    </script>
-        <script type="module" src="/js/main.js"></script>
-
+{#    <script>#}
+{#      if ("serviceWorker" in navigator) {#}
+{#        navigator.serviceWorker.register("sw.js").then((reg) => {#}
+{#          console.log(`Service worker has been registered`);#}
+{#        });#}
+{#      }#}
+{#    </script>#}
+        <!-- service worker registration -->
+    <script type="module" src="{{ asset('main.js') }}"></script>
     <script type="module" src="https://unpkg.com/wc-menu-button@5.0.0"></script>
 
     <script type="module" src="https://unpkg.com/side-drawer@4.1.0"></script>
@@ -34,7 +38,7 @@
 
     {% block stylesheets %}
     {{ parent() }}
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="manifest" href="{{ asset('manifest.json') }}" />
 
     <!-- manifest icons generated from https://app-manifest.firebaseapp.com/ -->
 

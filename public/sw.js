@@ -82,6 +82,8 @@ sw.addEventListener("fetch", (event) => {
     return;
   }
 
+  return; // skip cache
+
   const url = new URL(event.request.url);
 
   // ignore requests from chrome extensions
@@ -115,7 +117,7 @@ sw.addEventListener("fetch", (event) => {
           })
           .catch(() => {});
 
-          console.log("returning cached... " + url);
+          // console.log("returning cached... " + url);
         return cached_response;
       }
 
@@ -126,7 +128,7 @@ sw.addEventListener("fetch", (event) => {
         const cache = await caches.open(CACHE_NAME);
         await cache.put(request, response.clone());
 
-        console.log("returning fresh... " + url);
+        // console.log("returning fresh... " + url);
         return response;
       } catch (error) {
         if (cached_response) {

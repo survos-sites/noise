@@ -1,4 +1,4 @@
-console.log("registering sw")
+console.log("registering sw in main.js")
 if ("serviceWorker" in navigator) {
     try {
         let reg;
