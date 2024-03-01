@@ -1,6 +1,6 @@
 {
     "name": "noise",
-    "description": "A repo, maybe get this from github",
+    "description": "Symfony noise PWA",
     "keywords": [
         "php",
         "symfony"

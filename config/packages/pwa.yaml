@@ -5,7 +5,7 @@ pwa:
         background_color: "#c026d3"
         theme_color: "#c026d3"
         name: 'Simple White Noise App'
-        short_name: 'todo'
+        short_name: 'noise'
         description: 'White noise, using Symfony'
         orientation: "any"
         display: "standalone"

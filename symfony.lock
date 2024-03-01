@@ -40,6 +40,9 @@
             "tests/bootstrap.php"
         ]
     },
+    "spomky-labs/phpwa": {
+        "version": "1.0.3"
+    },
     "survos/deployment-bundle": {
         "version": "1.5.121"
     },
