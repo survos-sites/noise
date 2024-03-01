@@ -25,11 +25,9 @@
 {#      }#}
 {#    </script>#}
         <!-- service worker registration -->
-    <script type="module" src="{{ asset('main.js') }}"></script>
+{#    <script type="module" src="{{ asset('main.js') }}"></script>#}
     <script type="module" src="https://unpkg.com/wc-menu-button@5.0.0"></script>
-
     <script type="module" src="https://unpkg.com/side-drawer@4.1.0"></script>
-
     <script
             type="module"
             src="https://unpkg.com/@storedotapp/pwa-install-dialog@1.1.2/index.mjs"
@@ -38,8 +36,7 @@
 
     {% block stylesheets %}
     {{ parent() }}
-    <link rel="manifest" href="{{ asset('manifest.json') }}" />
-
+{#    <link rel="manifest" href="{{ asset('manifest.json') }}" />#}
     <!-- manifest icons generated from https://app-manifest.firebaseapp.com/ -->
 
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/logo180.png" />
@@ -192,8 +189,7 @@
     />
     <!-- /PWA Stuff -->
 
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     {% endblock %}
 
 {% block title 'Background Noise' %}

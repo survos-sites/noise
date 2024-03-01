@@ -6,6 +6,7 @@
   <div>
     <div class="row-container">
       <h2>Background Noise</h2>
+      <img src="{{ asset('icons/icon-72x72.png') }}"/>
       <div {{ stimulus_controller('hello', {name: 'Tac'}) }}>
         Say hello here.
       </div>
@@ -26,7 +27,7 @@
     <div id="play-inner-button" class="play"></div>
   </button>
   <audio id="white-audio" preload="auto" loop>
-    <source src="./sounds/WhiteNoise.mp3" type="audio/mpeg" />
+    <source src="{{ asset('./sounds/WhiteNoise.mp3') }}" type="audio/mpeg" />
   </audio>
 </div>
 <side-drawer id="drawer">
@@ -61,6 +62,4 @@
         id="install-dialog"
         app="backgroundnoise-app"
 ></pwa-install-dialog>
-<script src="./index.js" type="module"></script>
-<!-- won't work locally -->
 {% endblock %}

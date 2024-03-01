@@ -4,7 +4,7 @@ pwa:
         enabled: true
         background_color: "#c026d3"
         theme_color: "#c026d3"
-        name: 'Simple TODO App'
+        name: 'Simple White Noise App'
         short_name: 'todo'
         description: 'White noise, using Symfony'
         orientation: "any"
@@ -14,7 +14,8 @@ pwa:
         id: "/"
         start_url: "./"
         icons:
-            - src: "images/todo.svg"
+            # https://www.veryicon.com/icons/miscellaneous/smart-site/noise-3.html
+            - src: "images/noise-3.svg"
               sizes: "any"
         screenshots:
             - "images/screenshot1.png"

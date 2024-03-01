@@ -4,7 +4,7 @@
   "name": "Background Noise",
   "scope": "/",
   "display": "standalone",
-  "start_url": "./index.html",
+  "start_url": "./",
   "short_name": "BG Noise",
   "theme_color": "#b859ed",
   "description": "A simple white noise app that plays in the background.",
