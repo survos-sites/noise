@@ -12,7 +12,7 @@ pwa:
         scope: "/"
         display_override: ['fullscreen', 'minimal-ui', 'window-controls-overlay']
         id: "/"
-        start_url: "./"
+        start_url: "./index"
         icons:
             # https://www.veryicon.com/icons/miscellaneous/smart-site/noise-3.html
             - src: "images/noise-3.svg"
