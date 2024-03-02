@@ -45,15 +45,15 @@ const menuButton = document.getElementById("menu-button");
  */
 const drawer = document.getElementById("drawer");
 
-/** @type HTMLButtonElement */
-const installDialog = document.querySelector("#install-dialog");
-/** @type HTMLElement */
-const installButton = document.querySelector("#install-button");
+// /** @type HTMLButtonElement */
+// const installDialog = document.querySelector("#install-dialog");
+// /** @type HTMLElement */
+const installButton = document.querySelector("#install");
 
-installDialog.addEventListener("ready", () => {
-    installButton.removeAttribute("hidden");
-});
-
+// installDialog.addEventListener("ready", () => {
+//     installButton.removeAttribute("hidden");
+// });
+//
 installButton.addEventListener("click", () => {
     installDialog.show();
 });
@@ -105,3 +105,28 @@ document.addEventListener("keydown", (ev) => {
         }
     }
 });
+
+let installPrompt = null;
+// const installButton = document.querySelector("#install");
+
+window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    installPrompt = event;
+    installButton.removeAttribute("hidden");
+});
+
+// main.js
+
+installButton.addEventListener("click", async () => {
+    if (!installPrompt) {
+        return;
+    }
+    const result = await installPrompt.prompt();
+    console.log(`Install prompt was: ${result.outcome}`);
+    disableInAppInstallPrompt();
+});
+
+function disableInAppInstallPrompt() {
+    installPrompt = null;
+    installButton.setAttribute("hidden", "");
+}

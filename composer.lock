@@ -1261,16 +1261,16 @@
         },
         {
             "name": "doctrine/persistence",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "f75d11b1bcd0a9b75a9e1cabd80ffe3bc0164bcc"
+                "reference": "b6fd1f126b13c1f7e7321f7338b14a19116b5de4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/f75d11b1bcd0a9b75a9e1cabd80ffe3bc0164bcc",
-                "reference": "f75d11b1bcd0a9b75a9e1cabd80ffe3bc0164bcc",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/b6fd1f126b13c1f7e7321f7338b14a19116b5de4",
+                "reference": "b6fd1f126b13c1f7e7321f7338b14a19116b5de4",
                 "shasum": ""
             },
             "require": {
@@ -1339,7 +1339,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/persistence/issues",
-                "source": "https://github.com/doctrine/persistence/tree/3.3.0"
+                "source": "https://github.com/doctrine/persistence/tree/3.3.1"
             },
             "funding": [
                 {
@@ -1355,7 +1355,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-01T10:11:31+00:00"
+            "time": "2024-03-01T19:53:13+00:00"
         },
         {
             "name": "doctrine/sql-formatter",
@@ -2100,16 +2100,16 @@
         },
         {
             "name": "spomky-labs/phpwa",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spomky-Labs/phpwa.git",
-                "reference": "593e5e289bf2c538f6d6cb7fbe919ecd07790bbc"
+                "reference": "f53c6cdff97630183f2a36527ad6aa15b8ef0eaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spomky-Labs/phpwa/zipball/593e5e289bf2c538f6d6cb7fbe919ecd07790bbc",
-                "reference": "593e5e289bf2c538f6d6cb7fbe919ecd07790bbc",
+                "url": "https://api.github.com/repos/Spomky-Labs/phpwa/zipball/f53c6cdff97630183f2a36527ad6aa15b8ef0eaf",
+                "reference": "f53c6cdff97630183f2a36527ad6aa15b8ef0eaf",
                 "shasum": ""
             },
             "require": {
@@ -2181,7 +2181,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Spomky-Labs/phpwa/issues",
-                "source": "https://github.com/Spomky-Labs/phpwa/tree/1.0.3"
+                "source": "https://github.com/Spomky-Labs/phpwa/tree/1.0.4"
             },
             "funding": [
                 {
@@ -2197,7 +2197,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2024-03-01T16:16:50+00:00"
+            "time": "2024-03-01T21:13:33+00:00"
         },
         {
             "name": "symfony/asset",
