@@ -31,4 +31,10 @@ return [
         'version' => '1.11.3',
         'type' => 'css',
     ],
+    'wc-menu-button' => [
+        'version' => '5.0.0',
+    ],
+    'side-drawer' => [
+        'version' => '4.2.0',
+    ],
 ];
