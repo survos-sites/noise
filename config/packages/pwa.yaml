@@ -33,4 +33,4 @@ pwa:
             warm_cache_urls:
                 - 'app_homepage'
             page_fallback: 'app_homepage'
-            image_regex: '/\.(ico|png|jpe?g|gif|svg|mp3|webp|bmp)$/'
+            static_regex: '/\.(css|js|json|xml|txt|mp3|map|webmanifest)$/'
