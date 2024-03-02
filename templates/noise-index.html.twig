@@ -7,9 +7,6 @@
     <div class="row-container">
       <h2>Background Noise</h2>
       <img src="{{ asset('icons/icon-72x72.png') }}"/>
-      <div {{ stimulus_controller('hello', {name: 'Tac'}) }}>
-        Say hello here.
-      </div>
 
 {#      <div {{ stimulus_controller('register_service_worker') }}>#}
 {#        Service worker status#}
@@ -17,7 +14,9 @@
 
       <wc-menu-button id="menu-button"></wc-menu-button>
     </div>
-    <p>A simple white noise app.</p>
+    <p>A simple white noise app as a PWA.
+
+    </p>
     <button id="install" type="button" class="btn btn-primary" hidden>
       <span class="bi bi-download"></span>
       Install as PWA
@@ -66,10 +65,4 @@
     Page created at {{ 'now' | date("m/d/Y g:i:sA", "America/New_York") }}
 
   </div>
-
-
-  <pwa-install-dialog
-        id="install-dialog"
-        app="backgroundnoise-app"
-></pwa-install-dialog>
 {% endblock %}
