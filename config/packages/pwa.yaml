@@ -15,7 +15,7 @@ pwa:
         start_url: "./"
         icons:
             # https://www.veryicon.com/icons/miscellaneous/smart-site/noise-3.html
-            - src: "images/noise-3.svg"
+            - src: "images/noise-3-512.png"
               sizes: "any"
         screenshots:
             - "images/screenshot1.png"
@@ -32,5 +32,6 @@ pwa:
         workbox:
             warm_cache_urls:
                 - 'app_homepage'
+                - 'app_about'
             page_fallback: 'app_homepage'
             static_regex: '/\.(css|js|json|xml|txt|mp3|map|webmanifest)$/'
