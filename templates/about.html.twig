@@ -1,0 +1,68 @@
+{% extends "layout.html.twig" %}
+
+{% block body %}
+
+<div id="main">
+  <div>
+    <div class="row-container">
+      <h2>Background Noise</h2>
+      <img src="{{ asset('icons/icon-72x72.png') }}"/>
+
+{#      <div {{ stimulus_controller('register_service_worker') }}>#}
+{#        Service worker status#}
+{#      </div>#}
+
+      <wc-menu-button id="menu-button"></wc-menu-button>
+    </div>
+    <p>A simple white noise app as a PWA.
+
+    </p>
+    <button id="install" type="button" class="btn btn-primary" hidden>
+      <span class="bi bi-download"></span>
+      Install as PWA
+    </button>
+
+  </div>
+  <button id="play-button" type="button" title="Play / Pause">
+    <div id="play-inner-button" class="play"></div>
+  </button>
+  <audio id="white-audio" preload="auto" loop>
+    <source src="{{ asset('./sounds/WhiteNoise.mp3') }}" type="audio/mpeg" />
+  </audio>
+</div>
+<side-drawer id="drawer">
+  <div id="drawer-container">
+    <div class="column-container">
+      <h2>Background Noise</h2>
+      <div id="version"></div>
+    </div>
+    <div class="column-container">
+      <a
+              href="https://github.com/survos-sites/noise/issues/new?assignees=&labels=bug&template=bug_report.md&title="
+              target="_blank"
+              rel="noopener"
+      ><div class="selectable-row">
+          <div>Report Bug</div>
+          <div class="rotate90">&#8689;</div>
+        </div></a
+      >
+
+
+{#      <a#}
+{#              href="https://github.com/wes-goulet/background-noise/issues/new?assignees=&labels=enhancement&template=feature_request.md&title="#}
+{#              target="_blank"#}
+{#              rel="noopener"#}
+{#      ><div class="selectable-row">#}
+{#          <div>Suggest a Feature</div>#}
+{#          <div class="rotate90">&#8689;</div>#}
+{#        </div></a#}
+{#      >#}
+    </div>
+  </div>
+</side-drawer>
+
+  <div class="footer">
+    Page created at {{ 'now' | date("m/d/Y g:i:sA", "America/New_York") }}
+
+  </div>
+{% endblock %}

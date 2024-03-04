@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<div id="main">
+  <div>
+    <div class="row-container">
+      <h2>About Background Noise</h2>
+      <wc-menu-button id="menu-button"></wc-menu-button>
+    </div>
+    <p>A simple white noise app as a PWA.
+
+      The core functionality comes from https://github.com/wes-goulet/background-noise
+
+      This version runs as a Symfony App.
+
+    </p>
+  </div>
+</div>
+
+
+  <div class="footer">
+    Page created at {{ 'now' | date("m/d/Y g:i:sA", "America/New_York") }}
+
+  </div>
+{% endblock %}
