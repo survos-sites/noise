@@ -37,4 +37,31 @@ return [
     'side-drawer' => [
         'version' => '4.2.0',
     ],
+    'bootstrap' => [
+        'version' => '5.3.3',
+    ],
+    '@popperjs/core' => [
+        'version' => '2.11.8',
+    ],
+    'bootstrap/dist/css/bootstrap.min.css' => [
+        'version' => '5.3.3',
+        'type' => 'css',
+    ],
+    'bootswatch/dist/flatly/bootstrap.min.css' => [
+        'version' => '5.3.3',
+        'type' => 'css',
+    ],
+    '@kanety/stimulus-static-actions' => [
+        'version' => '1.0.1',
+    ],
+    '@kanety/stimulus-menu/dist/index.min.css' => [
+        'version' => '1.0.4',
+        'type' => 'css',
+    ],
+    'howler' => [
+        'version' => '2.2.4',
+    ],
+    'amplitudejs' => [
+        'version' => '5.3.2',
+    ],
 ];

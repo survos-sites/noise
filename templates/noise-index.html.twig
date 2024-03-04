@@ -1,68 +1,84 @@
-{% extends "layout.html.twig" %}
+{% extends "base.html.twig" %}
 
+{% block javascripts %}
+    {{ parent() }}
+    <script type="module">
+        import '{{ asset('./js/homepage.js') }}';
+    </script>
+{% endblock %}
 {% block body %}
 
-<div id="main">
-  <div>
-    <div class="row-container">
-      <h2>Background Noise</h2>
-      <img src="{{ asset('icons/icon-72x72.png') }}"/>
+    <div id="main">
+        <div>
+            <div class="row-container">
 
-{#      <div {{ stimulus_controller('register_service_worker') }}>#}
-{#        Service worker status#}
-{#      </div>#}
+                <h2>Background Noise</h2>
 
-      <wc-menu-button id="menu-button"></wc-menu-button>
-    </div>
-    <p>A simple white noise app as a PWA.
+                {#      {% set _sc='@survos/pwa-extra/connection_dector' %} #}
+                {#      {{ stimulus_controller(_sc) }} #}
+                <img src="{{ asset('icons/icon-72x72.png') }}"/>
 
-    </p>
-    <button id="install" type="button" class="btn btn-primary" hidden>
-      <span class="bi bi-download"></span>
-      Install as PWA
+                {#      <div {{ stimulus_controller('register_service_worker') }}> #}
+                {#        Service worker status #}
+                {#      </div> #}
+
+                <wc-menu-button id="menu-button"></wc-menu-button>
+            </div>
+            <p>A simple white noise app as a PWA.
+
+                {% if false %}
+                {% set _sc = '@survos/pwa-extra-bundle/detector' %}
+                {{ stimulus_controller(_sc) }}
+            <div
+                    {{ stimulus_controller(_sc) }}
+            >
+                <div {{ stimulus_target(_sc, 'online') }} >
+                    {{ _self }} ONLINE!
+                </div>
+                <div {{ stimulus_target(_sc, 'offline') }} hidden>
+                    OFFLINE
+                </div>
+
+            </div>
+            {% endif %}
+<twig:ConnectionDetector>
+    <twig:block name="online">
+        <button class="btn btn-warning">Online</button>
+    </twig:block>
+    <twig:block name="offline">
+        <button class="btn btn-danger">offline</button>
+    </twig:block>
+</twig:ConnectionDetector>
+
+<twig:PwaInstall>
+<twig:block name="install">
+    <button id="install" type="button" class="btn  btn-primary">
+        <span class="bi bi-download"></span>
+        Install as PWA
     </button>
+</twig:block>
 
-  </div>
-  <button id="play-button" type="button" title="Play / Pause">
-    <div id="play-inner-button" class="play"></div>
-  </button>
-  <audio id="white-audio" preload="auto" loop>
-    <source src="{{ asset('./sounds/WhiteNoise.mp3') }}" type="audio/mpeg" />
-  </audio>
-</div>
-<side-drawer id="drawer">
-  <div id="drawer-container">
-    <div class="column-container">
-      <h2>Background Noise</h2>
-      <div id="version"></div>
+<twig:block name="launch">
+    <button id="install" type="button" class="btn btn-success">
+        <span class="bi bi-download"></span>
+        It's installed! Launch it!
+    </button>
+</twig:block>
+
+
+</twig:PwaInstall>
+
+
+        </div>
+        <span class="bi bi-play fs-1"></span>
+
+        <button id="play-button" type="button" title="Play / Pause">
+            <div id="play-inner-button" class="play">
+            </div>
+        </button>
+        <audio id="white-audio" preload="auto" loop>
+            <source src="{{ asset('sounds/WhiteNoise.mp3') }}" type="audio/mpeg"/>
+        </audio>
     </div>
-    <div class="column-container">
-      <a
-              href="https://github.com/survos-sites/noise/issues/new?assignees=&labels=bug&template=bug_report.md&title="
-              target="_blank"
-              rel="noopener"
-      ><div class="selectable-row">
-          <div>Report Bug</div>
-          <div class="rotate90">&#8689;</div>
-        </div></a
-      >
 
-
-{#      <a#}
-{#              href="https://github.com/wes-goulet/background-noise/issues/new?assignees=&labels=enhancement&template=feature_request.md&title="#}
-{#              target="_blank"#}
-{#              rel="noopener"#}
-{#      ><div class="selectable-row">#}
-{#          <div>Suggest a Feature</div>#}
-{#          <div class="rotate90">&#8689;</div>#}
-{#        </div></a#}
-{#      >#}
-    </div>
-  </div>
-</side-drawer>
-
-  <div class="footer">
-    Page created at {{ 'now' | date("m/d/Y g:i:sA", "America/New_York") }}
-
-  </div>
 {% endblock %}

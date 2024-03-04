@@ -3,24 +3,23 @@
 {% block body %}
 
 <div id="main">
-  <div>
-    <div class="row-container">
-      <h2>About Background Noise</h2>
-      <wc-menu-button id="menu-button"></wc-menu-button>
-    </div>
-    <p>A simple white noise app as a PWA.
 
-      The core functionality comes from https://github.com/wes-goulet/background-noise
+  {% set _sc = 'audio_player' %}
+  <div {{ stimulus_controller(_sc, {
+    startingTrack: asset('sounds/WhiteNoise.mp3'),
+    playlist: []
+  }) }}>
+    Audio player here.
+    <button
+            {{ stimulus_action(_sc, 'play') }}
+            {{ stimulus_target(_sc, 'play') }}
+            class="btn btn-primary">Play</button>
+    <button {{ stimulus_action(_sc, 'stop') }}
+            {{ stimulus_target(_sc, 'stop') }}
+            hidden
 
-      This version runs as a Symfony App.
-
-    </p>
+            class="btn btn-danger">Stop</button>
   </div>
-</div>
 
 
-  <div class="footer">
-    Page created at {{ 'now' | date("m/d/Y g:i:sA", "America/New_York") }}
-
-  </div>
 {% endblock %}
