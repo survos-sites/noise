@@ -6,7 +6,7 @@ import { version } from "./js/app-info.js";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootswatch/dist/flatly/bootstrap.min.css';
-// import 'bootstrap-icons/font/bootstrap-icons.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import './styles/app.css'
 import 'side-drawer';
 import 'wc-menu-button';
