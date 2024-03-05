@@ -2302,12 +2302,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spomky-Labs/pwa-bundle.git",
-                "reference": "cbe1cb9d1903934bec138ec8a780a4d23808be86"
+                "reference": "bb88c05d905ec3eb383df04dec048173cb8169b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spomky-Labs/pwa-bundle/zipball/cbe1cb9d1903934bec138ec8a780a4d23808be86",
-                "reference": "cbe1cb9d1903934bec138ec8a780a4d23808be86",
+                "url": "https://api.github.com/repos/Spomky-Labs/pwa-bundle/zipball/bb88c05d905ec3eb383df04dec048173cb8169b6",
+                "reference": "bb88c05d905ec3eb383df04dec048173cb8169b6",
                 "shasum": ""
             },
             "require": {
@@ -2396,27 +2396,27 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2024-03-05T18:29:04+00:00"
+            "time": "2024-03-05T20:21:55+00:00"
         },
         {
             "name": "survos/bootstrap-bundle",
-            "version": "1.5.170",
+            "version": "1.5.171",
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/BootstrapBundle.git",
-                "reference": "ab313ecbf5110ded867054e3df7ab4385220def9"
+                "reference": "8f9597573bb1ae5bf93fa61091f1199016d9e842"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/survos/BootstrapBundle/zipball/ab313ecbf5110ded867054e3df7ab4385220def9",
-                "reference": "ab313ecbf5110ded867054e3df7ab4385220def9",
+                "url": "https://api.github.com/repos/survos/BootstrapBundle/zipball/8f9597573bb1ae5bf93fa61091f1199016d9e842",
+                "reference": "8f9597573bb1ae5bf93fa61091f1199016d9e842",
                 "shasum": ""
             },
             "require": {
                 "endroid/installer": "^1.4",
                 "knplabs/knp-menu-bundle": "^3.2",
                 "php": "^8.1",
-                "survos/core-bundle": "^1.5.170",
+                "survos/core-bundle": "^1.5.171",
                 "symfony/config": "^6.4 || ^7.0",
                 "symfony/dependency-injection": "^6.4 || ^7.0",
                 "symfony/http-kernel": "^6.4 || ^7.0",
@@ -2450,7 +2450,7 @@
             },
             "require-dev": {
                 "phpstan/phpstan": "^1.10",
-                "survos/auth-bundle": "^1.5.170",
+                "survos/auth-bundle": "^1.5.171",
                 "symfony/security-bundle": "^7.0",
                 "symfony/translation": "^7.0"
             },
@@ -2485,7 +2485,7 @@
             ],
             "support": {
                 "issues": "https://github.com/survos/BootstrapBundle/issues",
-                "source": "https://github.com/survos/BootstrapBundle/tree/1.5.170"
+                "source": "https://github.com/survos/BootstrapBundle/tree/1.5.171"
             },
             "funding": [
                 {
@@ -2493,11 +2493,11 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-05T19:28:47+00:00"
+            "time": "2024-03-05T20:31:35+00:00"
         },
         {
             "name": "survos/core-bundle",
-            "version": "1.5.170",
+            "version": "1.5.171",
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/SurvosCoreBundle.git",
@@ -2573,7 +2573,7 @@
             ],
             "support": {
                 "issues": "https://github.com/survos/SurvosCoreBundle/issues",
-                "source": "https://github.com/survos/SurvosCoreBundle/tree/1.5.170"
+                "source": "https://github.com/survos/SurvosCoreBundle/tree/1.5.171"
             },
             "funding": [
                 {
@@ -10295,7 +10295,7 @@
         },
         {
             "name": "survos/deployment-bundle",
-            "version": "1.5.170",
+            "version": "1.5.171",
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/SurvosDeploymentBundle.git",
@@ -10341,7 +10341,7 @@
             ],
             "support": {
                 "issues": "https://github.com/survos/SurvosDeploymentBundle/issues",
-                "source": "https://github.com/survos/SurvosDeploymentBundle/tree/1.5.170"
+                "source": "https://github.com/survos/SurvosDeploymentBundle/tree/1.5.171"
             },
             "funding": [
                 {
@@ -10353,7 +10353,7 @@
         },
         {
             "name": "survos/maker-bundle",
-            "version": "1.5.170",
+            "version": "1.5.171",
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/SurvosMakerBundle.git",
@@ -10455,7 +10455,7 @@
             ],
             "support": {
                 "issues": "https://github.com/survos/SurvosMakerBundle/issues",
-                "source": "https://github.com/survos/SurvosMakerBundle/tree/1.5.170"
+                "source": "https://github.com/survos/SurvosMakerBundle/tree/1.5.171"
             },
             "funding": [
                 {
