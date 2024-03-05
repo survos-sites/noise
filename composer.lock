@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "075e4254698b383308776826b44c262f",
+    "content-hash": "465529069d07a45c648700cec01917d1",
     "packages": [
         {
             "name": "composer/semver",
@@ -2585,20 +2585,21 @@
         },
         {
             "name": "survos/pwa-extra-bundle",
-            "version": "1.5.165",
+            "version": "1.5.171",
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/SurvosPwaExtraBundle.git",
-                "reference": "5d4d74c9d434a56352a17552d4df5658ef7322a4"
+                "reference": "2f6759d129c60e51734c5c76ba61186e023b5d3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/survos/SurvosPwaExtraBundle/zipball/5d4d74c9d434a56352a17552d4df5658ef7322a4",
-                "reference": "5d4d74c9d434a56352a17552d4df5658ef7322a4",
+                "url": "https://api.github.com/repos/survos/SurvosPwaExtraBundle/zipball/2f6759d129c60e51734c5c76ba61186e023b5d3a",
+                "reference": "2f6759d129c60e51734c5c76ba61186e023b5d3a",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.1",
+                "symfony/asset-mapper": "7.0.3",
                 "symfony/config": "^6.4 || ^7.0",
                 "symfony/dependency-injection": "^6.4 || ^7.0",
                 "symfony/http-kernel": "^6.4 || ^7.0",
@@ -2610,7 +2611,8 @@
                 "symfony/framework-bundle": "^6.4 || ^7.0",
                 "symfony/phpunit-bridge": "^6.4 || ^7.0",
                 "symfony/twig-bundle": "^6.4 || ^7.0",
-                "symfony/var-dumper": "^6.4 || ^7.0"
+                "symfony/var-dumper": "^6.4 || ^7.0",
+                "zenstruck/console-extra": "^1.4"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -2630,7 +2632,7 @@
             ],
             "support": {
                 "issues": "https://github.com/survos/SurvosPwaExtraBundle/issues",
-                "source": "https://github.com/survos/SurvosPwaExtraBundle/tree/1.5.165"
+                "source": "https://github.com/survos/SurvosPwaExtraBundle/tree/1.5.171"
             },
             "funding": [
                 {
@@ -2638,7 +2640,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-04T15:26:30+00:00"
+            "time": "2024-03-05T19:28:11+00:00"
         },
         {
             "name": "symfony/asset",
@@ -2711,16 +2713,16 @@
         },
         {
             "name": "symfony/asset-mapper",
-            "version": "v7.0.5",
+            "version": "v7.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/asset-mapper.git",
-                "reference": "07133d369eb9f644985584d0877d294c8847a4f0"
+                "reference": "537b9575df2f0a809abe9dd1117bb4ec578f7a21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/asset-mapper/zipball/07133d369eb9f644985584d0877d294c8847a4f0",
-                "reference": "07133d369eb9f644985584d0877d294c8847a4f0",
+                "url": "https://api.github.com/repos/symfony/asset-mapper/zipball/537b9575df2f0a809abe9dd1117bb4ec578f7a21",
+                "reference": "537b9575df2f0a809abe9dd1117bb4ec578f7a21",
                 "shasum": ""
             },
             "require": {
@@ -2769,7 +2771,7 @@
             "description": "Maps directories of assets & makes them available in a public directory with versioned filenames.",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/asset-mapper/tree/v7.0.5"
+                "source": "https://github.com/symfony/asset-mapper/tree/v7.0.3"
             },
             "funding": [
                 {
@@ -2785,7 +2787,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-04T12:47:58+00:00"
+            "time": "2024-01-23T19:26:06+00:00"
         },
         {
             "name": "symfony/cache",
