@@ -1,17 +1,5 @@
 {
     "controllers": {
-        "@survos/pwa-extra-bundle": {
-            "detector": {
-                "enabled": true,
-                "fetch": "lazy",
-                "autoimport": []
-            },
-            "install": {
-                "enabled": true,
-                "fetch": "lazy",
-                "autoimport": []
-            }
-        },
         "@symfony/ux-turbo": {
             "turbo-core": {
                 "enabled": true,

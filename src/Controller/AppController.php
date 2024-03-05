@@ -2,10 +2,12 @@
 
 namespace App\Controller;
 
+use Survos\PwaExtraBundle\Attribute\PwaExtra;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
+#[PwaExtra(cacheStrategy: 'CacheOnly')]
 class AppController extends AbstractController
 {
     #[Route('/', name: 'app_homepage')]
@@ -16,7 +18,8 @@ class AppController extends AbstractController
         ]);
     }
 
-    #[Route('/about', name: 'app_about')] // not sure why the manifest can't start on /
+    #[Route('/about', name: 'app_about')] // not sure why the manifest can't start on /'#[PwaExtra(cacheStrategy: 'CacheOnly')]
+    #[PwaExtra(cacheStrategy: 'CacheThenNetwork')]
     public function about(): Response
     {
         return $this->render('about.html.twig', [
