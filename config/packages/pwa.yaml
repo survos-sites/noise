@@ -30,8 +30,23 @@ pwa:
         src: "sw.js"
         skip_waiting: true
         workbox:
-            warm_cache_urls:
-                - 'app_homepage'
-                - 'app_about'
+#            resource_caches:
+#                - regex: '\/pages\/.*$'
+#                  cache_name: 'static-pages'
+#                  strategy: 'cacheFirst'
+##                  network_timeout: 2 # Wait only 2 seconds (only when strategy = networkFirst
+#                  urls: # List of URLs to precache. The URL shall be comprised within the regex
+#                      - 'app_terms_of_service'
+#                      - 'app_about'
+#                - regex: '\/articles\/.*$'
+#                  cache_name: 'articles'
+#                  strategy: 'staleWhileRevalidate'
+#                  broadcast: true # Broadcast changes only when strategy = staleWhileRevalidate
+#                  urls: # List of URLs to precache. The URL shall be comprised within the regex
+##                      - 'app_articles'
+#
+##            warm_cache_urls:
+##                - 'app_homepage'
+###                - 'app_about'
             page_fallback: 'app_homepage'
             static_regex: '/\.(css|js|json|xml|txt|mp3|map|webmanifest)$/'

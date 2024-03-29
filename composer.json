@@ -1,4 +1,8 @@
 {
+    "name": "survos-sigtes/noise",
+    "description": "Simple PWA with white noise",
+    "keywords": ["symfony","pwa"],
+
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "dev",
@@ -13,7 +17,7 @@
         "doctrine/orm": "^2.17",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.24",
-        "spomky-labs/pwa-bundle": "1.1.x-dev",
+        "spomky-labs/pwa-bundle": "^1.1",
         "survos/bootstrap-bundle": "^1.5",
         "survos/pwa-extra-bundle": "^1.5.171",
         "symfony/asset": "7.0.*",
@@ -41,6 +45,7 @@
         "symfony/string": "7.0.*",
         "symfony/translation": "7.0.*",
         "symfony/twig-bundle": "7.0.*",
+        "symfony/ux-icons": "2.x-dev",
         "symfony/ux-turbo": "^2.13",
         "symfony/ux-twig-component": "^2.16",
         "symfony/validator": "7.0.*",

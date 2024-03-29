@@ -14,6 +14,10 @@
 
                 <h2>Background Noise</h2>
 
+{#                {{ ux_icon('mdi:symfony', {class: 'w-4 h-4'}) }}#}
+                {# or #}
+{#                <twig:UX:Icon name="mdi:check" class="w-4 h-4" />#}
+
                 {#      {% set _sc='@survos/pwa-extra/connection_dector' %} #}
                 {#      {{ stimulus_controller(_sc) }} #}
                 <img src="{{ asset('icons/icon-72x72.png') }}"/>
@@ -52,10 +56,9 @@
 
 <twig:PwaInstall>
 <twig:block name="install">
-    <button type="button" class="btn  btn-primary">
-        <span class="bi bi-download"></span>
         Install as PWA
-    </button>
+{#    <twig:Button variant="success">#}
+{#    </twig:Button>#}
 </twig:block>
 
 <twig:block name="launch">
@@ -70,10 +73,16 @@
 
 
         </div>
-        <span class="bi bi-play fs-1"></span>
+
+        <figure>
+            <figcaption>Listen to the T-Rex:</figcaption>
+            <audio controls src="{{ asset('sounds/WhiteNoise.mp3')  }}"></audio>
+        </figure>
 
         <button id="play-button" type="button" title="Play / Pause">
             <div id="play-inner-button" class="play">
+{#                <twig:UX:Icon name="ph:play-bold" class="w-2 h-2" />#}
+                <span class="bi bi-play fs-1"></span>
             </div>
         </button>
         <audio id="white-audio" preload="auto" loop>
