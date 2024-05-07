@@ -5,6 +5,17 @@ This application aims to replicate the Background Noise App using Symfony compon
 It is mostly a testing environment and demostration of how to deploy a Symfony-based application as a PWA, using AssetMapper and tools like https://github.com/Spomky-Labs/phpwa
 
 
+## Developer Installation
+
+```bash
+git clone git@github.com:survos-sites/noise.git && cd noise
+composer install
+symfony check:req
+symfony server:start -d
+symfony open:local
+```
+
+
 ## Migration
 
 The key element of the migration is to generate the sw.js file from pwa.yaml instead of hand-crafting it. 
