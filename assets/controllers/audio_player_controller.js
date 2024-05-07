@@ -15,16 +15,31 @@ export default class extends Controller {
     connect() {
         console.log(this.startingTrackValue);
         // super.connect();
-        var sound = new Howl({
+        // https://github.com/goldfire/howler.js#documentation
+        this.sound = new Howl({
             src: [this.startingTrackValue],
             onplay: (id) => console.log('playing ' + id),
             onstop: (id) => console.log('Stopping ' + id)
         });
+        this.stopTarget.hidden=true;
         // sound.onplay((id) => console.log('playing ' + id));
         // sound.onstop((id) => console.log('Stopping ' + id));
-        this.sound = sound;
     }
 
+    toggle(e) {
+        console.log(e);
+        if (this.sound.playing()) {
+
+            this.sound.pause();
+            this.playTarget.hidden=false;
+            this.stopTarget.hidden=true;
+        } else {
+            this.sound.play();
+            this.playTarget.hidden=true;
+            this.stopTarget.hidden=false;
+        }
+        // if playing, stop...
+    }
     play() {
         console.log(this.sound.playing());
         this.sound.play();

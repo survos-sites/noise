@@ -1,31 +1,13 @@
 {% extends "base.html.twig" %}
 
-{% block javascripts %}
-    {{ parent() }}
-    <script type="module">
-        import '{{ asset('./js/homepage.js') }}';
-    </script>
-{% endblock %}
 {% block body %}
 
-    <div id="main">
+    {% set _appSc = 'app' %}
+    <div id="main" {{ stimulus_controller(_appSc) }}>
         <div>
             <div class="row-container">
-
                 <h2>Background Noise</h2>
-
-{#                {{ ux_icon('mdi:symfony', {class: 'w-4 h-4'}) }}#}
-                {# or #}
-{#                <twig:UX:Icon name="mdi:check" class="w-4 h-4" />#}
-
-                {#      {% set _sc='@survos/pwa-extra/connection_dector' %} #}
-                {#      {{ stimulus_controller(_sc) }} #}
                 <img src="{{ asset('icons/icon-72x72.png') }}"/>
-
-                {#      <div {{ stimulus_controller('register_service_worker') }}> #}
-                {#        Service worker status #}
-                {#      </div> #}
-
                 <wc-menu-button id="menu-button"></wc-menu-button>
             </div>
             <p>A simple white noise app as a PWA.
@@ -45,49 +27,55 @@
 
             </div>
             {% endif %}
-<twig:ConnectionDetector>
-    <twig:block name="online">
-        <button class="btn btn-warning">Online</button>
-    </twig:block>
-    <twig:block name="offline">
-        <button class="btn btn-danger">offline</button>
-    </twig:block>
-</twig:ConnectionDetector>
-
-<twig:PwaInstall>
-<twig:block name="install">
-        Install as PWA
-{#    <twig:Button variant="success">#}
-{#    </twig:Button>#}
-</twig:block>
-
-<twig:block name="launch">
-    <button type="button" class="btn btn-success">
-        <span class="bi bi-box-arrow-up-right"></span>
-        It's installed! Launch it!
-    </button>
-</twig:block>
 
 
-</twig:PwaInstall>
+            <twig:ConnectionDetector>
+                <twig:block name="online">
+                    <button class="btn btn-warning">Online</button>
+                </twig:block>
+                <twig:block name="offline">
+                    <button class="btn btn-danger">offline</button>
+                </twig:block>
+            </twig:ConnectionDetector>
+
+            <twig:PwaInstall>
+                <twig:block name="install">
+                    Install as PWA
+                    {#    <twig:Button variant="success"> #}
+                    {#    </twig:Button> #}
+                </twig:block>
+
+                <twig:block name="launch">
+                    <button type="button" class="btn btn-success">
+                        <span class="bi bi-box-arrow-up-right"></span>
+                        It's installed! Launch it!
+                    </button>
+                </twig:block>
+            </twig:PwaInstall>
 
 
         </div>
+        {% set _sc = 'audio_player' %}
+        <div {{ stimulus_controller(_sc, {
+            startingTrack: asset('sounds/WhiteNoise.mp3')
+        }) }}>
 
-        <figure>
-            <figcaption>Listen to the T-Rex:</figcaption>
-            <audio controls src="{{ asset('sounds/WhiteNoise.mp3')  }}"></audio>
-        </figure>
-
-        <button id="play-button" type="button" title="Play / Pause">
-            <div id="play-inner-button" class="play">
-{#                <twig:UX:Icon name="ph:play-bold" class="w-2 h-2" />#}
-                <span class="bi bi-play fs-1"></span>
-            </div>
+            <button
+                    {{ stimulus_action(_sc, 'toggle') }}
+                    id="play-button" type="button" title="Play / Pause">
+                <div id="play-inner-button" class="playx">
+                    {#                <twig:UX:Icon name="ph:play-bold" class="w-2 h-2" /> #}
+                    <span {{ stimulus_target(_sc, 'play') }} class="bi bi-play fs-1"></span>
+                    <span {{ stimulus_target(_sc, 'stop') }} class="bi bi-pause-btn fs-1"></span>
+                </div>
+            </button>
+            <audio {{ stimulus_target(_sc, 'audio') }} id="white-audio" preload="auto" loop>
+            </audio>
+        </div>
+        <button {{ stimulus_action(_appSc, 'close', 'click') }}>
+            Close
         </button>
-        <audio id="white-audio" preload="auto" loop>
-            <source src="{{ asset('sounds/WhiteNoise.mp3') }}" type="audio/mpeg"/>
-        </audio>
     </div>
+
 
 {% endblock %}
