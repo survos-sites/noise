@@ -15,6 +15,13 @@ symfony server:start -d
 symfony open:local
 ```
 
+If working on the PWA bundle, install survos in the same directory as noise, and run
+
+```bash
+../survos/link .
+```
+
+
 
 ## Migration
 
