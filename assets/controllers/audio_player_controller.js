@@ -13,13 +13,13 @@ export default class extends Controller {
     // ...
 
     connect() {
-        console.log(this.startingTrackValue);
+        // console.log(this.startingTrackValue);
         // super.connect();
         // https://github.com/goldfire/howler.js#documentation
         this.sound = new Howl({
             src: [this.startingTrackValue],
-            onplay: (id) => console.log('playing ' + id),
-            onstop: (id) => console.log('Stopping ' + id)
+            // onplay: (id) => console.log('playing ' + id),
+            // onstop: (id) => console.log('Stopping ' + id)
         });
         this.stopTarget.hidden=true;
         // sound.onplay((id) => console.log('playing ' + id));
@@ -27,9 +27,7 @@ export default class extends Controller {
     }
 
     toggle(e) {
-        console.log(e);
         if (this.sound.playing()) {
-
             this.sound.pause();
             this.playTarget.hidden=false;
             this.stopTarget.hidden=true;
@@ -41,7 +39,7 @@ export default class extends Controller {
         // if playing, stop...
     }
     play() {
-        console.log(this.sound.playing());
+        // console.log(this.sound.playing());
         this.sound.play();
         this.playTarget.hidden=true;
         this.stopTarget.hidden=false;

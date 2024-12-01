@@ -1,10 +1,8 @@
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉')
-
 import './bootstrap.js'; // stimulus
 import { version } from "./js/app-info.js";
 
 import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootswatch/dist/flatly/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import './styles/app.css'

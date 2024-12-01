@@ -4,4 +4,4 @@ import Timeago from 'stimulus-timeago';
 const app = startStimulusApp();
 app.register('timeago', Timeago);
 
-app.debug = true;
+app.debug = false;
