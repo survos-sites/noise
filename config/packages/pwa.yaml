@@ -30,6 +30,8 @@ pwa:
         src: "sw.js"
         skip_waiting: true
         workbox:
+            asset_cache:
+                regex: '/\.(css|js|json|xml|txt|mp3|map|webmanifest)$/'
 #            resource_caches:
 #                - regex: '\/pages\/.*$'
 #                  cache_name: 'static-pages'
@@ -49,4 +51,3 @@ pwa:
 ##                - 'app_homepage'
 ###                - 'app_about'
             page_fallback: 'app_homepage'
-            static_regex: '/\.(css|js|json|xml|txt|mp3|map|webmanifest)$/'

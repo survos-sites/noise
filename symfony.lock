@@ -1,29 +1,14 @@
 {
-    "doctrine/doctrine-bundle": {
-        "version": "2.11",
+    "bizkit/versioning-bundle": {
+        "version": "1.2",
         "recipe": {
-            "repo": "github.com/symfony/recipes",
+            "repo": "github.com/symfony/recipes-contrib",
             "branch": "main",
-            "version": "2.10",
-            "ref": "0b4a11ee7e60b36227502ed26874edd7e8b66353"
+            "version": "1.0",
+            "ref": "ecb844d4e78c7e1834fb360fbb4d3846da02e581"
         },
         "files": [
-            "config/packages/doctrine.yaml",
-            "src/Entity/.gitignore",
-            "src/Repository/.gitignore"
-        ]
-    },
-    "doctrine/doctrine-migrations-bundle": {
-        "version": "3.3",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "3.1",
-            "ref": "1d01ec03c6ecbd67c3375c5478c9a423ae5d6a33"
-        },
-        "files": [
-            "config/packages/doctrine_migrations.yaml",
-            "migrations/.gitignore"
+            "config/packages/bizkit_versioning.yaml"
         ]
     },
     "knplabs/knp-menu-bundle": {
@@ -110,6 +95,18 @@
         },
         "files": [
             ".env"
+        ]
+    },
+    "symfony/form": {
+        "version": "7.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "7.2",
+            "ref": "7d86a6723f4a623f59e2bf966b6aad2fc461d36b"
+        },
+        "files": [
+            "config/packages/csrf.yaml"
         ]
     },
     "symfony/framework-bundle": {

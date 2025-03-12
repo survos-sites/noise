@@ -4,20 +4,15 @@
     "keywords": ["symfony","pwa"],
 
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.2",
+        "php": "^8.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-imagick": "*",
-        "doctrine/doctrine-bundle": "^2.11",
-        "doctrine/doctrine-migrations-bundle": "^3.3",
-        "doctrine/orm": "^2.17",
-        "phpdocumentor/reflection-docblock": "^5.3",
-        "phpstan/phpdoc-parser": "^1.24",
-        "spomky-labs/pwa-bundle": "1.2.x",
+        "spomky-labs/pwa-bundle": "1.3.x",
         "survos/bootstrap-bundle": "^1.5",
         "survos/pwa-extra-bundle": "^1.5.171",
         "symfony/asset": "^7.1",
@@ -51,15 +46,16 @@
         "symfony/validator": "^7.1",
         "symfony/web-link": "^7.1",
         "symfony/yaml": "^7.1",
-        "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/extra-bundle": "^3.0",
+        "twig/twig": "^3.0"
     },
     "config": {
         "allow-plugins": {
+            "endroid/installer": true,
             "php-http/discovery": true,
+            "survos/installer": true,
             "symfony/flex": true,
-            "symfony/runtime": true,
-            "endroid/installer": true
+            "symfony/runtime": true
         },
         "sort-packages": true
     },
@@ -106,7 +102,7 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^12.0",
         "survos/deployment-bundle": "^1.5",
         "survos/maker-bundle": "^1.5",
         "symfony/browser-kit": "^7.1",
