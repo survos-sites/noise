@@ -21,4 +21,5 @@ return [
     Survos\PwaExtraBundle\SurvosPwaExtraBundle::class => ['all' => true],
     Symfony\UX\Icons\UXIconsBundle::class => ['all' => true],
     Bizkit\VersioningBundle\BizkitVersioningBundle::class => ['all' => true],
+    Doctrine\Bundle\DoctrineBundle\DoctrineBundle::class => ['all' => true],
 ];
