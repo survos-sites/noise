@@ -92,4 +92,13 @@ return [
     '@babel/runtime/helpers/esm/defineProperty' => [
         'version' => '7.23.8',
     ],
+    'idb' => [
+        'version' => '8.0.3',
+    ],
+    'idb-keyval' => [
+        'version' => '6.2.2',
+    ],
+    '@spomky-labs/pwa/helpers' => [
+        'path' => './vendor/spomky-labs/pwa-bundle/assets/src/helpers.js',
+    ],
 ];
